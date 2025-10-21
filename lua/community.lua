@@ -24,6 +24,7 @@ return {
 
   { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   { import = "astrocommunity.colorscheme.sonokai" },
+  { import = "astrocommunity.colorscheme.everblush-nvim" },
 
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 
