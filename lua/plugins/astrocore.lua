@@ -26,7 +26,7 @@ return {
     },
     options = {
       opt = {
-        relativenumber = true,
+        relativenumber = false,
         number = true,
         spell = false,
         signcolumn = "yes",
