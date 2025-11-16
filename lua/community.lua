@@ -26,7 +26,5 @@ return {
   { import = "astrocommunity.colorscheme.sonokai" },
   { import = "astrocommunity.colorscheme.everblush-nvim" },
 
-  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
-
   { import = "astrocommunity.completion.copilot-lua-cmp" },
 }

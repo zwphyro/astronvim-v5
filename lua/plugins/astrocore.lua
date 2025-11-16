@@ -31,6 +31,7 @@ return {
         spell = false,
         signcolumn = "yes",
         wrap = false,
+        scrolloff = 20,
       },
       g = {},
     },
