@@ -5,8 +5,9 @@ return {
       preset = "default",
       ["<Tab>"] = {
         function()
-          if require("codeium.virtual_text").get_current_completion_item() then
-            vim.api.nvim_input(require("codeium.virtual_text").accept())
+          local status, vtext = pcall(require, "codeium.virtual_text")
+          if status and vtext.get_current_completion_item() then
+            vim.api.nvim_input(vtext.accept())
             return true
           else
             return false
