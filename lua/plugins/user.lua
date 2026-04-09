@@ -63,4 +63,34 @@ return {
     init = function() vim.g.mkdp_filetypes = { "markdown" } end,
     ft = { "markdown" },
   },
+
+  {
+    "yetone/avante.nvim",
+    opts = {
+      provider = "openrouter",
+      providers = {
+        openrouter = {
+          __inherited_from = "openai",
+          endpoint = "https://openrouter.ai/api/v1",
+          model = "moonshotai/kimi-k2.5",
+          api_key_name = "OPENROUTER_API_KEY",
+        },
+      },
+      behaviour = {
+        auto_suggestions = false,
+      },
+      mcp = {
+        enable = true,
+        servers = {
+          figma = {
+            command = "npx",
+            args = { "-y", "@modelcontextprotocol/server-figma" },
+            env = {
+              FIGMA_PERSONAL_ACCESS_TOKEN = os.getenv "FIGMA_PERSONAL_ACCESS_TOKEN",
+            },
+          },
+        },
+      },
+    },
+  },
 }
