@@ -65,6 +65,20 @@ return {
   },
 
   {
+    "ravitemer/mcphub.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    build = "npm install -g mcp-hub@latest",
+    config = function() require("mcphub").setup() end,
+    extensions = {
+      avante = {
+        make_slash_commands = true,
+      },
+    },
+  },
+
+  {
     "yetone/avante.nvim",
     opts = {
       provider = "openrouter",
@@ -79,18 +93,11 @@ return {
       behaviour = {
         auto_suggestions = false,
       },
-      mcp = {
-        enable = true,
-        servers = {
-          figma = {
-            command = "npx",
-            args = { "-y", "@modelcontextprotocol/server-figma" },
-            env = {
-              FIGMA_PERSONAL_ACCESS_TOKEN = os.getenv "FIGMA_PERSONAL_ACCESS_TOKEN",
-            },
-          },
-        },
-      },
+      system_prompt = function()
+        local hub = require("mcphub").get_hub_instance()
+        return hub and hub:get_active_servers_prompt() or ""
+      end,
+      custom_tools = function() return require("mcphub.extensions.avante").mcp_tool() end,
     },
   },
 }
