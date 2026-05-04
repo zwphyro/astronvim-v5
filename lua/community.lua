@@ -24,10 +24,6 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.diff-keybindings" },
 
-  { import = "astrocommunity.git.fugit2-nvim" },
-
-  { import = "astrocommunity.ai.avante-nvim" },
-
   { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   { import = "astrocommunity.colorscheme.sonokai" },
   { import = "astrocommunity.colorscheme.everblush-nvim" },
