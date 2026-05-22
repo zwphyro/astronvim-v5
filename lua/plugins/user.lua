@@ -63,4 +63,20 @@ return {
     init = function() vim.g.mkdp_filetypes = { "markdown" } end,
     ft = { "markdown" },
   },
+
+  {
+    "karb94/neoscroll.nvim",
+    config = function() require("neoscroll").setup {} end,
+  },
+
+  {
+    "shrynx/line-numbers.nvim",
+    config = function()
+      require("line-numbers").setup {
+        enabled = true,
+        mode = "both", -- Options: "relative", "absolute", "both", "none"
+        format = "abs_rel", -- Shows absolute first, then relative ("rel_abs" also works)
+      }
+    end,
+  },
 }

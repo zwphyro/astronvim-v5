@@ -29,4 +29,6 @@ return {
   { import = "astrocommunity.colorscheme.everblush-nvim" },
 
   { import = "astrocommunity.editing-support.auto-save-nvim" },
+
+  { import = "astrocommunity.workflow.hardtime-nvim" },
 }
